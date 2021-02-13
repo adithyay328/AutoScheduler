@@ -19,12 +19,12 @@ function App() {
           <Route path="/auth">
             <Auth />
           </Route>
-          <Route path="/">
-            <Landing />
-          </Route>
           {/* change homeauth to home with redirect once we have auth complete */}
           <Route path="/homeauth"> 
             <Home />
+          </Route>
+          <Route path="/">
+            <Landing />
           </Route>
         </Switch>
       </Router>
