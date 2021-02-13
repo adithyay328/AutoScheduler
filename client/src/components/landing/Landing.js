@@ -1,5 +1,5 @@
 import Header from '../atoms/Header'
-import HomeWrapper from '../base/wrappers/LandingWrapper'
+import LandingWrapper from '../base/wrappers/LandingWrapper'
 import ButtonComponent from '../atoms/ButtonComponent'
 import Paragraph from '../atoms/Paragraph';
 import { Link } from 'react-router-dom';

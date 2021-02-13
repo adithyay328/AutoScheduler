@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Auth from './components/auth/Auth';
 import Landing from './components/landing/Landing';
+import Home from './components/home/Home';
 
 
 function App() {
