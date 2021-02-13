@@ -2,6 +2,7 @@ import AuthWrapper from '../base/wrappers/AuthWrapper'
 import Header from '../atoms/Header'
 import { Form, Input } from 'antd'
 import ButtonComponent from '../atoms/ButtonComponent'
+import InputComponent from '../atoms/InputComponent'
 import emailValidation from '../../utils/validations/emailValidation'
 import passwordValidation from '../../utils/validations/passwordValidation'
 
@@ -27,30 +28,26 @@ function Auth() {
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
                 >
-                    <Form.Item
+                    <InputComponent
                         label="Email"
                         name="email"
+                        type="email"
                         rules={ emailValidation('Please input your email!') }
-                    >
-                        <Input />
-                    </Form.Item>
-
-                    <Form.Item
+                    />
+                    
+                    <InputComponent
                         label="Password"
                         name="password"
+                        type="password"
                         rules={ passwordValidation('Please input your password!') }
-                    >
-                        <Input.Password />
-                    </Form.Item>
+                    />
 
-                    <Form.Item>
-                        <ButtonComponent
-                            type="primary"
-                            htmlType="submit"
-                            buttontext="Join"
-                            extramessage="errorMessage"
-                        />
-                    </Form.Item>
+                    <ButtonComponent
+                        type="primary"
+                        htmlType="submit"
+                        buttontext="Join"
+                        extramessage="errorMessage"
+                    />
                 </Form>
             </AuthWrapper>
         </>

@@ -33,7 +33,7 @@ const InputComponent = (props) => {
             >
                 <Input
                     type={type}
-                    placeholder="Vyplňte.."
+                    placeholder="Type.."
                     className="input-component"
                     onChange={onChange}
                     {...rest}
