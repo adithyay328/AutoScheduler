@@ -9,7 +9,11 @@ const LandingWrapper = ({ children }) => {
             <Col span={12}>
                 <Row className="landing-wrapper-row-form">
                     <Col span={3} />
-                    <Col span={18}>{children}</Col>
+                    <Col span={18}>
+                        <div style={{textAlign: 'left', padding: '10px'}}>
+                            {children}
+                        </div>
+                    </Col>
                     <Col span={3} />
                 </Row>
             </Col>

@@ -1,3 +1,5 @@
+import Header from '../atoms/Header'
+
 function Home() {
     return (
         <>
@@ -8,3 +10,5 @@ function Home() {
         </>
     )
 }
+
+export default Home;
