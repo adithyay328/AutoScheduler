@@ -1,5 +1,8 @@
+html,
 body {
   margin: 0;
+  height: 100%;
+  position: relative;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +13,66 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Auth Wrapper */
+.auth-wrapper-row {
+  height: 100%;
+}
+
+.auth-wrapper-row-form {
+  padding: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-wrapper-col-image {
+  padding: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-wrapper-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Home Wrapper */
+.home-wrapper-row {
+  height: 100%;
+}
+
+.home-wrapper-row-form {
+  padding: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-wrapper-col-image {
+  padding: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-wrapper-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
