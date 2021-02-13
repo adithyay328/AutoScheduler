@@ -1,0 +1,11 @@
+Overall design of the algorithm:
+Grab all time allocations for a particular user(off of postgresql)
+
+Start by inputting all fixed time allocations, ensuring that there aren't any overlaps
+Then, in all the empty spaces in between those, schedule in the flexible time allocations
+    Take into account the maximum time per session, and the max time spent per day
+
+Allow break configuration
+    Ask people the minimum amount of time to spend on a task(i.e, no value schduling in 2 minutes to do a task, unless the task literally
+    only lasts 2 minutes)
+    Also add support for break frequency config, I.E. how frequently you want to take breaks
