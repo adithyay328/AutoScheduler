@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import Auth from './components/auth/Auth';
-import Home from './components/home/Home';
+import Landing from './components/landing/Landing';
 
 
 function App() {
@@ -19,6 +19,10 @@ function App() {
             <Auth />
           </Route>
           <Route path="/">
+            <Landing />
+          </Route>
+          {/* change homeauth to home with redirect once we have auth complete */}
+          <Route path="/homeauth"> 
             <Home />
           </Route>
         </Switch>

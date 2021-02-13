@@ -30,7 +30,7 @@ const ButtonComponent = (props) => {
                 {...props}
             >
                 {
-                    <Text style={{color: 'white', fontSize: 30, fontWeight: 500}}>
+                    <Text style={{color: 'white', fontSize: 30, lineHeight: "30px", fontWeight: 500}}>
                         {buttontext}
                     </Text>
                 }

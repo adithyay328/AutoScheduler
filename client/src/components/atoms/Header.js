@@ -19,8 +19,7 @@ const Header = (props) => {
                             src={logo}
                             preview={false}
                             style={{
-                                width: '280px',
-                                height: '60px',
+                                height: "50px"
                             }}
                         />
                     </Link>
