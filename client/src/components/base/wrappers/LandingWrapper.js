@@ -5,7 +5,7 @@ import imageLanding from '../../../styles/images/landing_page.svg'
 const LandingWrapper = ({ children }) => {
     return (
         <>
-        <Row type="flex" style={{padding: '10px'}} className="landing-wrapper-row">
+        <Row type="flex" className="landing-wrapper-row">
             <Col span={12}>
                 <Row className="landing-wrapper-row-form">
                     <Col span={3} />
@@ -27,9 +27,7 @@ const LandingWrapper = ({ children }) => {
                                 preview={false} 
                                 className="landing-wrapper-image"
                                 style={{
-                                    display: 'block',
-                                    marginLeft: 'auto',
-                                    marginRight: 'auto',
+                                    alignSelf: 'center'
                                 }}
                             />
                         </div>

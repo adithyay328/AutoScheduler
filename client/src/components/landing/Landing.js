@@ -10,23 +10,23 @@ function Landing() {
         <>
             <Header />
             <LandingWrapper>
-                <div style={{ padding: '10px'}}>
-                    <div>
-                        <Title style={{ fontSize: '33px', verticalAlign: "middle"}} text='Get your tasks ' />
-                        <span style={{fontSize: "44px", fontWeight: 400, verticalAlign: "middle", paddingLeft: "10px"}}>DONE</span>
-                    </div>
+                <div>
+                    <Title style={{ fontSize: '33px', verticalAlign: "middle"}} text='Get your tasks ' />
+                    <span style={{fontSize: "44px", fontWeight: 400, verticalAlign: "middle", paddingLeft: "10px"}}>DONE</span>
                 </div>
 
-                <div style={{ padding: '10px'}}>
-                    <div>
-                        <Paragraph style={{ fontSize: '16px' }} text='
-                            Stop worrying about the tasks you need to do. 
-                            Autotask will automatically build out a plan for your tasks so you always know what to do!
-                        '/>
-                    </div>
-                </div>
+                <br />
 
-                <div style={{padding: '20px'}}>
+                <div>
+                    <Paragraph style={{ fontSize: '18px' }} text='
+                        Stop worrying about the tasks you need to do. 
+                        Autotask will automatically build out a plan for your tasks so you always know what to do!
+                    '/>
+                </div>
+                
+                <br />
+
+                <div>
                     <Link to="/auth">
                         <ButtonComponent
                             type="primary"

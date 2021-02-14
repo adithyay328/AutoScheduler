@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.0",
     "ant-design": "^1.0.0",
     "antd": "^4.12.3",
+    "craco": "0.0.3",
     "craco-less": "^1.17.1",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.1",
     "react-beautiful-dnd": "^13.0.0",
     "react-big-calendar": "^0.32.0",
@@ -18,9 +21,9 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "env-cmd -f .env.dev craco  start",
+    "build": "env-cmd -f .env.dev craco  build",
+    "test": "craco  test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

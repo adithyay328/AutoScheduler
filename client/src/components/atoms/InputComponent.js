@@ -19,24 +19,24 @@ const InputComponent = (props) => {
     return (
         <>
             <Item
-                label={label ? <Paragraph text={label} strong /> : null}
+                label={
+                    label ? <Paragraph style={{color: '#595959'}} text={label} strong /> : null
+                }
                 name={name}
                 initialValue={initialValue}
                 dependencies={dependencies}
                 rules={rules}
                 extra={
-                    <Paragraph
+                    <span
                         text={extramessage}
-                        className="extramessage-text"
-                    ></Paragraph>
+                    ></span>
                 }
             >
                 <Input
                     type={type}
-                    placeholder="Type.."
-                    className="input-component"
                     onChange={onChange}
                     {...rest}
+                    style={{backgroundColor: '#F4F4F4', fontSize: '16px'}}
                 />
             </Item>
         </>

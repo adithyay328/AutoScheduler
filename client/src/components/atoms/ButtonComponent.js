@@ -26,11 +26,11 @@ const ButtonComponent = (props) => {
                 onClick={onClick}
                 htmlType={htmlType}
                 shape="round"
-                style={{height: 60, width: 400, backgroundColor: '#88AEED', color: 'white'}}
+                style={{height: 48, width: '100%', color: 'white'}}
                 {...props}
             >
                 {
-                    <Text style={{color: 'white', fontSize: 30, lineHeight: "30px", fontWeight: 500}}>
+                    <Text style={{color: 'white', fontSize: 24, lineHeight: "24px", fontWeight: 500}}>
                         {buttontext}
                     </Text>
                 }

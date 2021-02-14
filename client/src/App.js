@@ -1,5 +1,5 @@
-import './App.css';
-import 'antd/dist/antd.css';
+import './App.less';
+//import 'antd/dist/antd.css'; - Not needed now
 import {
   BrowserRouter as Router,
   Switch,
