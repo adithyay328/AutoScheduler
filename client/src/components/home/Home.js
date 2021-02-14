@@ -99,6 +99,10 @@ function Home() {
     let [tasks, setTasks] = React.useState(baseTasks);
     let [curDate, setCurDate] = React.useState(new Date())
 
+    React.useEffect(() => {
+        console.log(tasks)
+    }, [tasks])
+
     return (
         <DragDropContext
             onDragEnd = {(result) => onDragEnd(result, setTasks)}

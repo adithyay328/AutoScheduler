@@ -7,6 +7,8 @@ import NumberInput from "./NumberInput";
 import TimeInput from "./TimeInput";
 
 function updateTasks(tasks, newTask) {
+    //always make a new copy (never mutate original state)
+    tasks = [...tasks];
     let idx = tasks.findIndex(v => v.rank > newTask.rank);
 
     //otherwise

@@ -1,13 +1,65 @@
-@import "react-big-calendar/lib/sass/styles";
-
-.rbc-event {
-  background-color: "red";
+.rbc-time-view {
+  border: 0px white;
 }
 
-.rbc-slot-selection {
-  background-color: "black";
+.rbc-time-header.rbc-overflowing {
+  border: none;
+}
+
+.rbc-event {
+  width: 100%;
+  background-color: #d7fbe8;
+  border: none;
+  color: #2e2e2e;
+}
+
+.rbc-current-time-indicator {
+  background-color: rgb(79, 182, 207);
+}
+
+.rbc-event.rbc-selected,
+.rbc-day-slot .rbc-selected.rbc-background-event {
+  background-color: #8feebb;
+}
+
+.rbc-selected {
+  border: 0;
+  background-color: #b1fad3;
+  & > .rbc-row {
+    border: 0;
+  }
+}
+
+.rbc-time-header-content {
+  border: 0;
+}
+
+.rbc-row-content {
+  border: 0;
 }
 
 .rbc-timeslot-group {
-  background-color: "lightpink";
+  min-height: 60px;
+  border: 0;
+}
+
+.rbc-events-container {
+  border: 0;
+}
+
+.rbc-time-content {
+  border-top: 0;
+}
+
+.rbc-now .rbc-today {
+  border: 0;
+}
+.rbc-time-column {
+  border-image-width: 0;
+  border: 0;
+}
+
+.rbc-day-slot .rbc-event,
+.rbc-day-slot .rbc-background-event {
+  border: 0;
 }
