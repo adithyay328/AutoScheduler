@@ -1,7 +1,7 @@
-function Popup() {
+function Popup({setTasks}) {
     return (
-        <div style={{backgroundColor: "white", width: "8em", height: "6em"}}>
-            I AM A POPUP
+        <div className="popup">
+            
         </div>
     )
 }

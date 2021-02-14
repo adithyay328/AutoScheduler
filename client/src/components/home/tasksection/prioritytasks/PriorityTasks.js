@@ -1,20 +1,17 @@
+import React from "react";
 import { Col, Row } from "antd"
 import Title from "../../../atoms/Title"
 import {differenceInMinutes, setHours} from "date-fns";
 import PriorityTask from "./PriorityTask";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { ReactComponent as PlusSquare } from "../../../../styles/images/plus_square.svg"
-
-
-
-
-function openModal(setTasks) {
-    return;
-}
+import Popup from "./Popup";
 
 function PriorityTasks({ tasks, setTasks }) {
+    let [popup, setPopup] = React.useState(true)
     return (
-        <div>
+        <>
+            <div style={{ opacity: popup ? 0.5: 1}}>
             <Title style={{textAlign: "left", marginBottom: "1.5em"}} text="Priorities" size={1.5} weight={400} />
             <Droppable droppableId={"PriorityTaskDroppable"}>
                 {provided => 
@@ -28,12 +25,14 @@ function PriorityTasks({ tasks, setTasks }) {
                 }   
             </Droppable>
             <Row className="priorityTask" justify="space-between">
-                <Col onClick={() => openModal(setTasks) }span={20} style={{ height: "100%", backgroundColor: "#88AEED", borderRadius: "0.5em", display: "flex", justifyContent: "flex-start", alignItems: "center", padding: "2em 0"}} >
+                <Col onClick={() => setPopup(true) }span={20} style={{ height: "100%", backgroundColor: "#88AEED", borderRadius: "0.5em", display: "flex", justifyContent: "flex-start", alignItems: "center", padding: "2em 0", cursor: "pointer"}} >
                     <PlusSquare style={{transform: "scale(0.5)"}} />
                 </Col>
             </Row>
             
-        </div>
+            </div>
+            {popup && <Popup />}
+        </>
     )
 }
 
