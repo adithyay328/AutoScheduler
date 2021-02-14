@@ -33,10 +33,10 @@ function getBG(rank) {
     else if(rank == 1) {
         return "#F5C731"
     }
-    else if(rank == 1) {
+    else if(rank == 2) {
         return "#C1C1C1"
     }
-    else if(rank == 1) {
+    else if(rank == 3) {
         return "#DC8733"
     }
     return "#E9E9E9"

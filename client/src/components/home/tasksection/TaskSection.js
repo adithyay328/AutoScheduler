@@ -2,11 +2,11 @@ import { Col, Row } from "antd"
 import PriorityTasks from "./prioritytasks/PriorityTasks"
 import Schedule from "./schedule/Schedule"
 
-function TaskSection({ tasks, setTasks, ...props }) {
+function TaskSection({ tasks, curDate, setTasks, ...props }) {
     return (
         <Row {...props}>
             <Col span={11}>
-                <Schedule />
+                <Schedule curDate={curDate} tasks={tasks} />
             </Col>
             <Col span={11}>
                 <PriorityTasks tasks={tasks} setTasks={setTasks} />

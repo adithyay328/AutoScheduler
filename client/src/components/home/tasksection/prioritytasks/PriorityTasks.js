@@ -8,12 +8,12 @@ import { ReactComponent as PlusSquare } from "../../../../styles/images/plus_squ
 import Popup from "./Popup";
 
 function PriorityTasks({ tasks, setTasks }) {
-    let [popup, setPopup] = React.useState(true)
+    let [popup, setPopup] = React.useState(false)
     return (
         <>
             <div style={{ opacity: popup ? 0.5: 1}}>
             <Title style={{textAlign: "left", marginBottom: "1.5em"}} text="Priorities" size={1.5} weight={400} />
-            <Droppable droppableId={"PriorityTaskDroppable"}>
+            <Droppable droppableId={"PriorityTaskDroppable"} style={{height: 600, overflowY: "scroll"}}>
                 {provided => 
                     <div 
                         ref = {provided.innerRef}
@@ -31,7 +31,7 @@ function PriorityTasks({ tasks, setTasks }) {
             </Row>
             
             </div>
-            {popup && <Popup />}
+            {popup && <Popup setPopup={setPopup} setTasks={setTasks} />}
         </>
     )
 }

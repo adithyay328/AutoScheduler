@@ -3,7 +3,19 @@ import Header from "../atoms/Header";
 import TaskSection from "./tasksection/TaskSection";
 import ToolSection from "./toolsection/ToolSection";
 import { DragDropContext } from "react-beautiful-dnd";
-import { differenceInMinutes } from "date-fns";
+import { format, parse, startOfWeek, getDay, differenceInMinutes } from "date-fns";
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
+
+const locales = {
+  'en-US': require('date-fns/locale/en-US'),
+}
+const localizer = dateFnsLocalizer({
+  format,
+  parse,
+  startOfWeek,
+  getDay,
+  locales,
+})
 
 function getFirstNonFixed(tasks) {
     let index = tasks.findIndex(v => v.rank == 1);
@@ -57,16 +69,16 @@ function onDragEnd(result, setTasks) {
             }
             tasks[destIndex].rank = tasks[destIndex + 1].rank - 1;
         }
-        return setTasks(tasks)
+        return tasks
     })
 }
 
 const baseTasks = [
     {id: 0, name: "school",
     timeData: {
-        start: new Date(2021, 2, 13, 8, 30),
-        end: new Date(2021, 2, 13, 14, 30),
-        duration: differenceInMinutes(new Date(2021, 2, 13, 14, 30), new Date(2021, 2, 13, 8, 30))
+        start: new Date(2021, 1, 14, 8, 30),
+        end: new Date(2021, 1, 14, 14, 30),
+        duration: differenceInMinutes(new Date(2021, 2, 14, 14, 30), new Date(2021, 2, 13, 8, 30))
     },
     rank: 0    
 },
@@ -85,6 +97,7 @@ const baseTasks = [
 
 function Home() {
     let [tasks, setTasks] = React.useState(baseTasks);
+    let [curDate, setCurDate] = React.useState(new Date())
 
     return (
         <DragDropContext
@@ -94,8 +107,8 @@ function Home() {
             <Header />
             {/* Container */}
             <div style={{paddingTop: "40px", width: "90%", margin: "auto"}}>
-                <ToolSection />
-                <TaskSection style={{ paddingTop: "30px" }} justify="space-between" tasks={tasks} setTasks={setTasks} />
+                <ToolSection curDate={curDate} setCurDate={setCurDate} />
+                <TaskSection curDate={curDate} style={{ paddingTop: "30px" }} justify="space-between" tasks={tasks} setTasks={setTasks} />
             </div>
         </DragDropContext>
     )

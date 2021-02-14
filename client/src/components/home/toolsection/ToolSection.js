@@ -3,8 +3,7 @@ import { Col, Row } from "antd";
 import ShiftIcon from "../ShiftIcon";
 import {format, addDays} from "date-fns";
 
-function ToolSection() {
-    let [curDate, setCurDate] = React.useState(new Date())
+function ToolSection({curDate, setCurDate}) {
     return (
         <div>
             <Row justify="space-between">
