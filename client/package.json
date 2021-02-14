@@ -12,6 +12,7 @@
     "craco": "0.0.3",
     "craco-less": "^1.17.1",
     "env-cmd": "^10.1.0",
+    "date-fns": "^2.17.0",
     "react": "^17.0.1",
     "react-beautiful-dnd": "^13.0.0",
     "react-big-calendar": "^0.32.0",
